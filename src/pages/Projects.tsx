@@ -40,7 +40,7 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="container mx-auto px-8 py-20">
+    <div className="container mx-auto px-8 py-8">
       <div className="text-center mb-16">
         <h2 className="text-5xl font-bold text-cyan-400 mb-4">
           Featured Projects

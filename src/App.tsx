@@ -81,7 +81,7 @@ function App() {
           {/* Mobile Hamburger Button - O'ng yuqorida */}
           <button
             onClick={toggleMobileMenu}
-            className="sm:hidden fixed top-6 right-6 z-50 p-3 rounded-full bg-slate-900/90 backdrop-blur-md border border-cyan-500/50"
+            className="sm:hidden fixed top-10 right-6 z-50 p-3 rounded-full bg-slate-900/90 backdrop-blur-md border border-cyan-500/50"
           >
             {isMobileMenuOpen ? (
               <X size={28} className="text-cyan-400" />

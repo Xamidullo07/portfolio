@@ -26,7 +26,7 @@ function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-8 py-20">
+    <div className="container mx-auto px-8 py-8">
       <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto items-start">
         <div>
           <h2 className="text-5xl font-bold text-cyan-400 mb-4">
