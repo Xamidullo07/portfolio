@@ -2,8 +2,9 @@ import resume from "../public/XamidulloBaxtiyorovResume.pdf";
 
 function Home() {
   return (
-    <div className="container mx-auto px-8 py-16">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* LEFT */}
         <div className="space-y-8">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -14,47 +15,51 @@ function Home() {
             </div>
 
             <div>
-              <h1 className="text-6xl font-bold mb-2">Hello</h1>
-              <h1 className="text-6xl font-bold">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-2">
+                Hello
+              </h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
                 I'm{" "}
-                <span className="text-cyan-400  px-4 py-1">
+                <span className="text-cyan-400 px-2 sm:px-4 py-1 block sm:inline">
                   Xamidullo Baxtiyorov
                 </span>
               </h1>
             </div>
 
-            <p className="text-2xl text-cyan-300">Frontend Developer</p>
+            <p className="text-xl sm:text-2xl text-cyan-300">
+              Frontend Developer
+            </p>
 
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-400 text-base sm:text-lg">
               JavaScript lover | Problem Solver | Crafting frameworks and coding
               the future
             </p>
           </div>
-          {/* <link rel="stylesheet" href="" /> */}
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <a
               href="https://github.com/Xamidullo07"
-              className="px-8 py-3 rounded-lg border-2 border-cyan-500 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 font-semibold transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]"
+              className="px-6 sm:px-8 py-3 rounded-lg border-2 border-cyan-500 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 font-semibold transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]"
             >
               Learn More
             </a>
             <a
               href={resume}
               download="XamidulloBaxtiyorovResume.pdf"
-              className="px-8 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300 font-semibold transition-all"
+              className="px-6 sm:px-8 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300 font-semibold transition-all"
             >
               Get Resume
             </a>
           </div>
 
-          <div className="flex gap-4 pt-4">
+          <div className="flex flex-wrap gap-3 pt-4">
             <Badge text="UI Magic" />
             <Badge text="Clean Code" />
             <Badge text="Innovation" />
           </div>
         </div>
 
+        {/* RIGHT */}
         <div className="relative">
           <div className="rounded-2xl border-2 border-cyan-500/50 bg-slate-900/50 backdrop-blur-md overflow-hidden shadow-[0_0_50px_rgba(34,211,238,0.3)]">
             <div className="flex items-center gap-2 px-4 py-3 bg-slate-800/80 border-b border-cyan-500/30">
@@ -66,7 +71,7 @@ function Home() {
               <span className="ml-4 text-cyan-400 text-sm">developer.js</span>
             </div>
 
-            <div className="p-20 font-mono text-xl leading-relaxed">
+            <div className="p-6 sm:p-10 lg:p-20 font-mono text-sm sm:text-lg lg:text-xl leading-relaxed">
               <div className="space-y-1">
                 <span className="text-pink-400">const</span>{" "}
                 <span className="text-cyan-300">profile</span>{" "}
