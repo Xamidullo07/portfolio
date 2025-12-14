@@ -14,30 +14,7 @@ const skillCategories = [
     color: "text-blue-400",
     skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
   },
-  // {
-  //   title: 'Backend Development',
-  //   icon: Database,
-  //   color: 'text-green-400',
-  //   skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'REST APIs', 'GraphQL']
-  // },
-  // {
-  //   title: "UI/UX Design",
-  //   icon: Palette,
-  //   color: "text-purple-400",
-  //   skills: [
-  //     "Figma",
-  //     "Responsive Design",
-  //     "Wireframing",
-  //     "Prototyping",
-  //     "Animation",
-  //   ],
-  // },
-  // {
-  //   title: "Cloud & DevOps",
-  //   icon: Cloud,
-  //   color: "text-orange-400",
-  //   skills: ["AWS", "Docker", "CI/CD", "Kubernetes", "Git", "Linux"],
-  // },
+
   {
     title: "Tools & Technologies",
     icon: Wrench,
