@@ -1,5 +1,7 @@
 import { Mail, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+const TELEGRAM_BOT_TOKEN = "BOT_TOKENINGNI_BU_YERGA_QO‘Y";
+const TELEGRAM_CHAT_ID = "CHAT_IDINGNI_BU_YERGA_QO‘Y";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -10,7 +12,7 @@ function Contact() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -18,11 +20,40 @@ function Contact() {
       [name]: value,
     }));
   };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    const text = `
+📩 Yangi xabar!
+
+👤 Ism: ${formData.name}
+📧 Email: ${formData.email}
+📝 Mavzu: ${formData.subject}
+💬 Xabar:
+${formData.message}
+  `;
+
+    try {
+      await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text,
+          }),
+        },
+      );
+
+      alert("Xabar Telegramga yuborildi ✅");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      alert("Xatolik yuz berdi ❌");
+      console.error(error);
+    }
   };
 
   return (
@@ -37,6 +68,7 @@ function Contact() {
           </p>
 
           <div className="space-y-6">
+            {/* Email */}
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
                 <Mail className="text-cyan-400" size={24} />
@@ -44,7 +76,7 @@ function Contact() {
               <div>
                 <h3 className="font-semibold text-white mb-1">Email</h3>
                 <a
-                  href="mailto:xamidullo@example.com"
+                  href="mailto:hamidullabaxtiyorov123@gmail.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   hamidullabaxtiyorov123@gmail.com
@@ -52,6 +84,25 @@ function Contact() {
               </div>
             </div>
 
+            {/* Telegram */}
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                <Send className="text-cyan-400" size={24} />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white mb-1">Telegram</h3>
+                <a
+                  href="https://t.me/x_baxtiyorov17"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  @oddiyDasturchi
+                </a>
+              </div>
+            </div>
+
+            {/* Location */}
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
                 <MapPin className="text-cyan-400" size={24} />

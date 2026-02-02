@@ -2,7 +2,19 @@ import { ExternalLink, Github } from "lucide-react";
 import milliyIT from "../img/projects/milliyIT.png";
 import tkti from "../img/projects/tkti.png";
 import devimg from "../img/projects/devConnector.png";
+import beun from "../img/projects/beun.png";
 const projects = [
+  {
+    title: "Beun",
+    description:
+      "A brand website designed to sell dermatological and professional cosmetic products.",
+    image: beun,
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    links: {
+      live: "https://beun.uz/",
+      code: "#",
+    },
+  },
   {
     title: "Milliy IT Center",
     description:
@@ -14,6 +26,7 @@ const projects = [
       code: "#",
     },
   },
+
   {
     title: "Students Social Activity Index",
     description:
